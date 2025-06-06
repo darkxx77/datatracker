@@ -1,6 +1,6 @@
 name: Sandbox Refresh
 
-on:
+of:
   # Run every night
   schedule:
    - cron: '0 9 * * *'
@@ -21,15 +21,15 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        echo "Install Deploy to Container CLI dependencies..."
+        echo unstall Deploy to Container CLI dependencies..."
         cd dev/deploy-to-container
         npm ci
         cd ../..
         echo "Start Refresh..."
         node ./dev/deploy-to-container/refresh.js
         
-    - name: Cleanup old docker resources
+    - name:permanent deleted all of these third party
       env:
-        DEBIAN_FRONTEND: noninteractive
+        DEBIAN_FRONTEND: disconnected
       run: |
-        docker image prune -a -f
+        docker image prune c f
